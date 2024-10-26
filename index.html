@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC पॉलिसीज</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/lic-logo.png.jpeg" alt="LIC Logo" class="lic-logo"> 
+        </div>
+        <h1>LIC पॉलिसीज</h1>
+        <h2>तुमच्या भविष्याची सुरक्षितता</h2>
+    </header>
+   
+    <section id="policies">
+        <h3>LIC च्या लोकप्रिय योजनाएं</h3>
+        <form id="policyForm" action="send-email.php" method="POST">
+            <ul>
+                <li>
+                    <strong>1. जीवन आनंद:</strong>
+                    <p>ही योजना संपूर्ण जीवन संरक्षण आणि गुंतवणूक दोन्ही प्रदान करते.</p>
+                    <p>वार्षिक प्रीमियम: ₹15,000 | अर्धवार्षिक प्रीमियम: ₹7,500</p>
+                    <p>पॉलिसी कालावधी: 20 वर्ष | मॅच्युरिटी रक्कम: ₹30,00,000</p>
+                    <button type="button" onclick="selectPolicy('जीवन आनंद', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>2. जीवन लक्ष्या:</strong>
+                    <p>ही योजना मुलांच्या शिक्षणासाठी डिझाइन केलेली आहे.</p>
+                    <p>वार्षिक प्रीमियम: ₹10,000 | अर्धवार्षिक प्रीमियम: ₹5,000</p>
+                    <p>पॉलिसी कालावधी: 15 वर्ष | मॅच्युरिटी रक्कम: ₹20,00,000</p>
+                    <button type="button" onclick="selectPolicy('जीवन लक्ष्या', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>3. टर्म विमा योजना:</strong>
+                    <p>सर्वात कमी प्रीमियमवर उच्च सम विमा मिळवण्यासाठी उपयुक्त.</p>
+                    <p>वार्षिक प्रीमियम: ₹8,000 | अर्धवार्षिक प्रीमियम: ₹4,000</p>
+                    <p>पॉलिसी कालावधी: 25 वर्ष | मॅच्युरिटी रक्कम: ₹50,00,000</p>
+                    <button type="button" onclick="selectPolicy('टर्म विमा योजना', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>4. जीवन आरोग्य:</strong>
+                    <p>आरोग्य विमा योजना, जे हॉस्पिटलायझेशन खर्च कव्हर करते.</p>
+                    <p>वार्षिक प्रीमियम: ₹12,000 | अर्धवार्षिक प्रीमियम: ₹6,000</p>
+                    <p>पॉलिसी कालावधी: 10 वर्ष | मॅच्युरिटी रक्कम: ₹15,00,000</p>
+                    <button type="button" onclick="selectPolicy('जीवन आरोग्य', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>5. नवीन अंतिवर्तन योजना:</strong>
+                    <p>जीवन विमा आणि बचत यांचा संयोग.</p>
+                    <p>वार्षिक प्रीमियम: ₹14,000 | अर्धवार्षिक प्रीमियम: ₹7,000</p>
+                    <p>पॉलिसी कालावधी: 20 वर्ष | मॅच्युरिटी रक्कम: ₹25,00,000</p>
+                    <button type="button" onclick="selectPolicy('नवीन अंतिवर्तन योजना', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>6. Bima Bachat:</strong>
+                    <p>साधी बचत योजना, जी जीवन कव्हर देते.</p>
+                    <p>वार्षिक प्रीमियम: ₹5,000 | अर्धवार्षिक प्रीमियम: ₹2,500</p>
+                    <p>पॉलिसी कालावधी: 12 वर्ष | मॅच्युरिटी रक्कम: ₹8,00,000</p>
+                    <button type="button" onclick="selectPolicy('Bima Bachat', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>7. LIC चा मर्यादित प्रीमियम अंतिवर्तन योजना:</strong>
+                    <p>मर्यादित प्रीमियम भरण्याची योजना.</p>
+                    <p>वार्षिक प्रीमियम: ₹9,000 | अर्धवार्षिक प्रीमियम: ₹4,500</p>
+                    <p>पॉलिसी कालावधी: 15 वर्ष | मॅच्युरिटी रक्कम: ₹18,00,000</p>
+                    <button type="button" onclick="selectPolicy('LIC चा मर्यादित प्रीमियम अंतिवर्तन योजना', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>8. Jeevan Shanti:</strong>
+                    <p>संपूर्ण जीवनासाठी आयुर्विमा सुरक्षा आणि नियमित मासिक उत्पन्न.</p>
+                    <p>वार्षिक प्रीमियम: ₹20,000 | अर्धवार्षिक प्रीमियम: ₹10,000</p>
+                    <p>पॉलिसी कालावधी: 30 वर्ष | मॅच्युरिटी रक्कम: ₹40,00,000</p>
+                    <button type="button" onclick="selectPolicy('Jeevan Shanti', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>9. LIC Kanyadaan Policy:</strong>
+                    <p>मुलीच्या विवाहासाठी आर्थिक सुरक्षा प्रदान करते.</p>
+                    <p>वार्षिक प्रीमियम: ₹7,000 | अर्धवार्षिक प्रीमियम: ₹3,500</p>
+                    <p>पॉलिसी कालावधी: 25 वर्ष | मॅच्युरिटी रक्कम: ₹15,00,000</p>
+                    <button type="button" onclick="selectPolicy('LIC Kanyadaan Policy', this)">Select Policy</button>
+                </li>
+                <li>
+                    <strong>10. LIC Bima Gold:</strong>
+                    <p>संपूर्ण जीवनासाठी संरक्षण आणि बचत दोन्ही प्रदान करते.</p>
+                    <p>वार्षिक प्रीमियम: ₹11,000 | अर्धवार्षिक प्रीमियम: ₹5,500</p>
+                    <p>पॉलिसी कालावधी: 20 वर्ष | मॅच्युरिटी रक्कम: ₹22,00,000</p>
+                    <button type="button" onclick="selectPolicy('LIC Bima Gold', this)">Select Policy</button>
+                </li>
+            </ul>
+            <input type="hidden" id="selectedPolicy" name="selectedPolicy" value="">
+            <button type="submit">Submit Selection</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 मंगल संजय रेपाले</p>
+    </footer>
+
+    <script>
+        function selectPolicy(policyName, button) {
+            // Update the button text and disable it
+            button.innerText = 'Selected';
+            button.disabled = true;
+
+            // Set the selected policy name in the hidden input
+            document.getElementById('selectedPolicy').value = policyName;
+
+            // Optionally alert the user
+            alert(policyName + " has been selected.");
+        }
+    </script>
+</body>
+</html>
